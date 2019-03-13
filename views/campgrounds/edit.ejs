@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+
+<div class='container'>
+    <div class='row'>
+        <h1 style='text-align: center'>Edit <%= editcampground.name %></h1>
+        <div style='width: 30%; margin: 25px auto;'>
+        <form action='/campgrounds/<%= editcampground._id%>?_method=put' method='post' enctype="multipart/form-data">
+            <div class='form-group'>
+                <input type='text' class='form-control' name="campground[name]" value='<%= editcampground.name %>'>
+            </div>
+            <div class='form-group'>
+                <input type='number' class='form-control' name='campground[price]' value='<%= editcampground.price %>' min='400' step='100'>
+            </div>
+            <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+            </div>
+            <div class='form-group'>
+                <input type='text' class='form-control' name="campground[description]" value='<%= editcampground.description %>'>
+            </div>
+            <div class="form-group">
+              <label for="location">Location</label>
+                <input class="form-control" type="text" name="location" id="location" value="<%= editcampground.location %>">
+            </div>
+            <div class='form-group'>
+                <button class='btn btn-lg btn-primary btn-block'>Submit!</button>    
+            </div>
+        </form>
+        <a href='/campgrounds/<%= editcampground._id%>'>Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

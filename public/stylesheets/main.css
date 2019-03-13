@@ -1,0 +1,20 @@
+.thumbnail img {
+    width: 100%;
+}
+.thumbnail {
+    padding: 0;
+}
+.thumbnail .caption-full {
+    padding: 9px;
+}
+.delete-form {
+    display: inline;
+}
+.pull-right {
+    opacity: 0.4;
+    color: rgba(107, 107, 107, 1);
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
